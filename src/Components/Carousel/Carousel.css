@@ -1,0 +1,78 @@
+.slide{
+  display: flex !important;
+  align-items: center;
+  padding: 30px 30px;
+  justify-content: space-evenly;
+  position: relative;
+  overflow: hidden;
+}
+.image img{
+  height: 400px;
+  width: 450px;
+}
+.banner{
+    background-color: black;
+    overflow: visible;
+    color: #b0b2b5;
+    padding-bottom: 50px;
+}
+.banner h1{
+    font-weight: bold;
+}
+.price p,span{
+    font-weight: bold;
+}
+.price span{
+    text-decoration-line: line-through;
+    color: lightslategray;
+}
+.slick-dots li button:before {
+  color: white;
+  font-size: 10px;
+}
+
+.slick-dots li.slick-active button:before {
+  color: red;
+}
+
+.slick-dots {
+  bottom: 0;
+}
+
+.bg-text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  opacity: 0.08;         
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 1;
+}
+.bg-text h1{
+    font-size: 200px;
+}
+
+.info,.image{
+  position: relative;
+  z-index: 2;
+}
+
+.price{
+    display: flex !important;
+    gap: 10px;
+}
+.banner button{
+    background-color:red;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    width: 80px;
+    font-size: small;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
