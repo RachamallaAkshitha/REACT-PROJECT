@@ -1,0 +1,9 @@
+body{
+    background-color: black;
+
+}
+
+::selection {
+  background-color: red;
+  color: white;   /* text color when selected */
+}
