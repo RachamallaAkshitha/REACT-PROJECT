@@ -1,0 +1,42 @@
+.adv-head h2{
+    color: white;
+    text-align: center;
+    margin-top: 90px;
+    margin-bottom: 90px;
+}
+
+.service-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+    margin-bottom: 90px;
+}
+
+.service-details{
+    display: flex;
+    gap:30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon{
+  font-size: 40px;
+  color:red;
+}
+
+.service{
+    display: flex;
+    flex-direction: column;
+}
+
+.service h5{
+    color: white;
+    margin: 0;
+}
+
+.service p{
+    color:rgb(172, 178, 181);
+    margin: 0;
+}
+
+
