@@ -1,0 +1,95 @@
+.heading h2{
+    color: white;
+    text-align: center;
+    margin-top: 10%;
+}
+
+.categories{
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.categories button{
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 3px 15px;
+    border-radius: 3px;
+}
+
+.categories button.active{
+    background-color: red;
+}
+
+.card-image{
+    background-color: rgb(15, 15, 15);
+    display: flex;
+    justify-content: center;
+    padding: 15px 0px;
+}
+
+.card-body p{
+       color:rgb(172, 178, 181);
+}
+
+img{
+    height: 175px;
+    width: 175px;
+}
+
+.card{
+    background-color: black;
+    border: none;
+    outline : 1px solid rgb(82, 80, 80);
+}
+
+.card-body h4{
+    color: white;
+}
+
+.card-price{
+    display: flex;
+    text-align: center;
+    gap: 20px;
+}
+
+.card-price p{
+    font-size:18px;
+    font-weight: bold;
+    color: white;
+}
+
+.card-price span{
+    font-weight: bold;
+    font-size: 14px;
+    color: lightslategrey;
+    text-decoration: line-through;
+}
+
+.card-body button{
+    background-color: red;
+    color: white;
+    min-width: 120px;
+    padding: 6px 90px;
+}
+.card-body hr{
+    color:#444444;
+    height: 2px;
+}
+
+.rating i {
+    color: red;       
+    font-size: 10px;
+    margin-right: 3px;
+}
+
+.browse {
+    height: 100%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;  
+    color: white;  
+    text-align: center;
+    border: 1px solid rgb(82, 80, 80);
+}
