@@ -1,0 +1,22 @@
+.product-images img{
+  height: 100px;
+  width: 100px;
+  border:   2px solid #AAAA;
+  padding: 15px 15px;
+}
+
+.product-images{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding-left: 10px;
+}
+
+.product-details{
+    display: flex;
+}
+
+.main-image img{
+    height: 550px;
+    width: 550px;
+}
