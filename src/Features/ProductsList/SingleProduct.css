@@ -1,22 +1,111 @@
-.product-images img{
-  height: 100px;
-  width: 100px;
-  border:   2px solid #AAAA;
-  padding: 15px 15px;
+.product-images img {
+    height: 100px;
+    width: 100px;
+    border: 2px solid #AAAA;
+    padding: 15px 15px;
 }
 
-.product-images{
+.product-images {
     display: flex;
     flex-direction: column;
     gap: 50px;
     padding-left: 10px;
 }
 
-.product-details{
+.product-details {
     display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
 }
 
-.main-image img{
+.main-image img {
     height: 550px;
     width: 550px;
+}
+
+.description h3 {
+    color: white;
+    font-weight: bolder;
+}
+
+.description p {
+    color: white;
+}
+
+.rating {
+  display: flex;
+  align-items: center; /* 👈 this fixes the issue */
+  gap: 2px;
+}
+
+.rating p {
+  margin: 0; /* remove default <p> margin */
+}
+
+
+.price-row {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.price-row p{
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.price-row span{
+    color: lightslategray;
+    text-decoration: line-through;
+    font-size: 16px;
+}
+
+
+
+.save-row{
+  display: flex;
+  gap:5px;
+}
+
+.save-row p,span{
+    color: green;
+    margin: 0;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.card-amount{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 70px;
+}
+
+.offers h5{
+    color: white;
+    margin-bottom: 30px;
+}
+
+.offers button{
+    background-color: black;
+    border: none;
+    outline: 1px solid #AAAA;
+    color: white;
+    width: 190px;
+    text-align: left;
+    padding: 8px 8px;
+}
+
+.buttons {
+  display: flex !important;
+  flex-direction: row;
+  gap: 30px;
+}
+
+hr{
+    color: #AAAA;
+    height: 2px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }

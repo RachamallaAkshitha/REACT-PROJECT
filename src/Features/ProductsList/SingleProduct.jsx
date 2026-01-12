@@ -10,6 +10,9 @@ export const SingleProduct = () => {
 
     if (!product) return <h2 className="text-center mt-5">Loading...</h2>;
 
+    const discount = Math.round(
+        ((product.originalPrice - product.finalPrice) / product.originalPrice) * 100
+    )
     return (
         <>
             <div className="product-details">
@@ -38,7 +41,7 @@ export const SingleProduct = () => {
                 </div>
 
                 <div className="description">
-                    <h4>{product.title}</h4>
+                    <h3>{product.title}</h3>
                     <p>{product.info}</p>
                     <div className="rating">
                         {Array.from({ length: 5 }, (_, index) => (
@@ -49,37 +52,53 @@ export const SingleProduct = () => {
                                         ? "fa-solid fa-star"
                                         : ""
                                 }
+
                             ></i>
+
                         ))}
+
+                        <p> | {product.ratings} Ratings</p>
 
                     </div>
 
                     <hr />
 
-                    <div className="card-price">
-                        <p>₹{product.finalPrice.toLocaleString()}</p>
-                        <span>₹{product.originalPrice.toLocaleString()}</span>
+                    <div className="card-amount">
 
-                        <div className="stock">
-                            <p></p>
+                        <div className="amount">
+                            <div className="price-row">
+                                <p>₹{product.finalPrice.toLocaleString()}</p>
+                                <span>₹{product.originalPrice.toLocaleString()}</span>
+                            </div>
+                            <div className="save-row">
+                                <p>You save ₹{(product.originalPrice - product.finalPrice).toLocaleString()}</p>
+
+                                <span>({discount}%)</span>
+                            </div>
+                            <p style={{ color: "#AAAA", margin: "0" }}>(Inclusive of all taxes)</p>
+
                         </div>
 
-
-
+                        <div className="stock">
+                            <button className="btn btn-success"><i className="fa-solid fa-check"></i>
+                                In Stock</button>
+                        </div>
 
                     </div>
 
                     <hr />
 
                     <div className="offers">
-                        <h6>Offers and Discounts</h6>
-                        <button>No Cost EMI on Credit  Card</button>
-                        <button>Pay Later & Avail Cashback</button>
+                        <h5>Offers and Discounts</h5>
+                        <div className="buttons">
+                            <button>No Cost EMI on Credit  Card</button>
+                            <button>Pay Later & Avail Cashback</button>
+                        </div>
                     </div>
 
                     <hr />
 
-                    <button className="btn btn-danger">Add to Cart</button>
+                    <button className="btn btn-danger" style={{padding:"5px 40px",borderRadius:"3px"}}>Add to Cart</button>
 
 
 
