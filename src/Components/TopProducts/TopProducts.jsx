@@ -1,7 +1,9 @@
 import { useMemo, useState } from "react"
 
 import "./TopProducts.css"
-import productsData from "../../Products/productsData"
+import productsData from "../Products/productsData"
+import { Link } from "react-router-dom"
+
 
 export const TopProducts = () => {
 
@@ -11,8 +13,6 @@ export const TopProducts = () => {
 
     ]
     const [activeCategory, setActiveCategory] = useState("All")
-
-    const rating = productsData.map(item => item.rateCount) * '*;'
 
     const limitedProducts = productsData.slice(0, 11);
 
@@ -36,7 +36,7 @@ export const TopProducts = () => {
             <div className="categories">
                 {
                     Categories.map(cat => (
-                        <button
+                        <button key={cat}
                             onClick={() => setActiveCategory(cat)}
                             className={activeCategory == cat ? "active" : ""}
                         >{cat}</button>
@@ -48,11 +48,17 @@ export const TopProducts = () => {
                     {
                         filterData.map(card => (
                             <div className="col-3" key={card.id}>
-                                <div className="card">
 
-                                    <div className="card-image">
-                                        <img src={card.images[0]} alt="" />
-                                    </div>
+                                <div className="card">
+                                    <Link
+                                        className="product-link"
+                                        to={`/product-details/${card.id}`}>
+
+
+                                        <div className="card-image">
+                                            <img src={card.images[0]} alt="" />
+                                        </div>
+                                    </Link>
 
                                     <div className="card-body">
 

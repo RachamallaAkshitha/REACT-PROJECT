@@ -48,6 +48,13 @@ img{
     color: white;
 }
 
+.product-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+
 .card-price{
     display: flex;
     text-align: center;
