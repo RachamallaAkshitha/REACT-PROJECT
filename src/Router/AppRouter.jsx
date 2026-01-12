@@ -3,6 +3,7 @@ import { SingleProduct } from "../Features/ProductsList/SingleProduct"
 import { TopProducts } from "../Components/TopProducts/TopProducts"
 import Carousel from "../Components/Carousel/Carousel"
 import FeaturedProducts from "../Components/FeaturedProducts/FeaturedProducts"
+import { Advantages } from "../Components/Advantages/Advantages"
 
 export const AppRouter = () => {
 
@@ -15,6 +16,7 @@ export const AppRouter = () => {
                 <Carousel/>
                 <FeaturedProducts/>
                 <TopProducts/>
+                <Advantages/>
                 </>
             }
             />

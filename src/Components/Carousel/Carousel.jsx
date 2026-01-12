@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Carousel.css"
 import productsData from "../Products/productsData";
+import { Link } from "react-router-dom";
 
 
 
@@ -30,7 +31,7 @@ const Carousel = () => {
               <div className="slide">
 
                 <div className="bg-text">
-                <h1>{item.type}</h1>
+                  <h1>{item.type}</h1>
                 </div>
 
                 <div key={item.id} className="info">
@@ -56,8 +57,12 @@ const Carousel = () => {
 
 
                 <div className="image">
-                  <img src={item.heroImage} alt="" />
-                </div>  
+                  <Link
+                    className="product-link"
+                    to={`/product-details/${item.id}`}>
+                    <img src={item.heroImage} alt="" />
+                  </Link>
+                </div>
               </div>
             ))
           }

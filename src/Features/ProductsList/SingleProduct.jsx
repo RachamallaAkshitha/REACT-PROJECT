@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import productsData from "../../Components/Products/productsData"
 import "./SingleProduct.css"
+import { useState } from "react";
 
 export const SingleProduct = () => {
 
@@ -13,31 +14,34 @@ export const SingleProduct = () => {
     const discount = Math.round(
         ((product.originalPrice - product.finalPrice) / product.originalPrice) * 100
     )
+
+    const [img,setImg] =useState(product.images[0])
+
     return (
         <>
             <div className="product-details">
                 <div className="product-images">
 
-                    <div className="image1">
+                    <div className="image-1" onClick={()=>setImg(product.images[0])}>
                         <img src={product.images[0]} alt="" />
                     </div>
 
-                    <div className="image-2">
+                    <div className="image-2" onClick={()=>setImg(product.images[1])}>
                         <img src={product.images[1]} alt="" />
                     </div>
 
-                    <div className="image-3">
+                    <div className="image-3" onClick={()=>setImg(product.images[2])}>
                         <img src={product.images[2]} alt="" />
                     </div>
 
-                    <div className="images-4">
+                    <div className="images-4" onClick={()=>setImg(product.images[3])}>
                         <img src={product.images[3]} alt="" />
                     </div>
 
                 </div>
 
                 <div className="main-image">
-                    <img src={product.images[0]} alt="" />
+                    <img src={img} alt="" />
                 </div>
 
                 <div className="description">
