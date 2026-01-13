@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import "./Header.css"
 export const Header = () => {
 
@@ -15,7 +16,9 @@ export const Header = () => {
                     </div>
 
                     <div className="cart">
-                        <i className="fa-solid fa-cart-shopping me-3"></i>
+                        <Link className="nav-link" to="/Cart">
+                            <i className="fa-solid fa-cart-shopping me-3"></i>
+                        </Link> 
                     </div>
 
                     <i className="fa-regular fa-user "></i>

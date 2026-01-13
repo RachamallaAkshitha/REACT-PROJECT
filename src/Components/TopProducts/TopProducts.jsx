@@ -3,9 +3,13 @@ import { useMemo, useState } from "react"
 import "./TopProducts.css"
 import productsData from "../Products/productsData"
 import { Link } from "react-router-dom"
+import { useDispatch } from "react-redux"
+import { ADDTOCART } from "../Redux/CartSlice"
 
 
 export const TopProducts = () => {
+
+    let dispatch=useDispatch();
 
     const Categories = [
         'All',
@@ -83,7 +87,7 @@ export const TopProducts = () => {
                                             <span>₹{card.originalPrice.toLocaleString()}</span>
                                         </div>
                                         <br />
-                                        <button>Add to cart</button>
+                                        <button onClick={()=>dispatch(ADDTOCART({...product,quantity:1}))}>Add to cart</button>
                                     </div>
                                 </div>
                             </div>

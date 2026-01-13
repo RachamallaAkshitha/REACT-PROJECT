@@ -34,12 +34,12 @@
 
 .rating {
   display: flex;
-  align-items: center; /* 👈 this fixes the issue */
+  align-items: center; 
   gap: 2px;
 }
 
 .rating p {
-  margin: 0; /* remove default <p> margin */
+  margin: 0; 
 }
 
 
@@ -109,6 +109,11 @@ hr{
     margin-top: 30px;
     margin-bottom: 30px;
 }
+
+/* .btn{
+    background-color: red;
+    color: white;
+} */
 
 /* Specifications */
 
@@ -180,6 +185,7 @@ hr{
      color: #B0B8C5; 
 }
 
+
 /* buttons */
 .details-buttons button{
     color: white;
@@ -191,7 +197,7 @@ hr{
     display: flex;
     justify-content: space-around;
     padding: 0px 200px;
-    margin-top: 90px;
+    margin-top: 130px;
     margin-bottom: 40px;
 }
 
@@ -202,7 +208,7 @@ hr{
 }
 
 .tab {
-  background: transparent;   /* ❌ no color */
+  background: transparent;   
   border: none;
   color: #8B94A3;
   padding: 6px 14px;
@@ -212,8 +218,7 @@ hr{
 }
 
 .tab.active {
-  background: #FF0000;       /* ✅ active color */
-  color: #FFFFFF;
+  background: red;      
 }
 
 /* hide all tab content by default */

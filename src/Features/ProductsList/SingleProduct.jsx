@@ -4,10 +4,14 @@ import "./SingleProduct.css"
 import { useState } from "react";
 import { Reviews } from "../../Reviews/reviews";
 import { RelatedProducts } from "../../Components/RelatedProducts/RelatedProducts";
+import { Advantages } from "../../Components/Advantages/Advantages";
+import { useDispatch } from "react-redux";
+import { ADDTOCART } from "../../Components/Redux/CartSlice";
 
 
 export const SingleProduct = () => {
 
+    let dispatch = useDispatch();
     const { id } = useParams();
 
     const product = productsData.find(item => item.id == Number(id))
@@ -109,7 +113,9 @@ export const SingleProduct = () => {
 
                     <hr />
 
-                    <button className="btn btn-danger" style={{ padding: "5px 40px", borderRadius: "3px" }}>Add to Cart</button>
+                    <button className="btn " style={{ padding: "5px 40px", borderRadius: "3px", color: "white", backgroundColor: "red" }}
+                        onClick={() => dispatch(ADDTOCART({ ...product, quantity: 1 }))}>
+                        Add to Cart</button>
 
                 </div>
             </div>
@@ -178,10 +184,12 @@ export const SingleProduct = () => {
 
 
             <div className={`tab-content ${tab === "Reviews" ? "show" : ""}`}>
-                <Reviews/>
+                <Reviews />
             </div>
 
-            <RelatedProducts currentProduct={product}/>
+            <RelatedProducts currentProduct={product} />
+
+            <Advantages />
 
         </>
     )

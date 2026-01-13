@@ -3,10 +3,12 @@ import { useMemo } from "react"
 import { Link } from "react-router-dom"
 import "./RelatedProducts.css"
 import productsData from "../Products/productsData"
+import { ADDTOCART } from "../Redux/CartSlice"
+import { useDispatch } from "react-redux"
 
 export const RelatedProducts = ({ currentProduct }) => {
-
-
+    
+    let dispatch=useDispatch();
 
     // Filter
     const filterData = productsData.filter(
@@ -62,7 +64,7 @@ export const RelatedProducts = ({ currentProduct }) => {
                                             <span>₹{card.originalPrice.toLocaleString()}</span>
                                         </div>
                                         <br />
-                                        <button>Add to cart</button>
+                                        <button onClick={()=>dispatch(ADDTOCART({...card,quantity:1}))}>Add to cart</button>
                                     </div>
                                 </div>
                             </div>
@@ -73,3 +75,5 @@ export const RelatedProducts = ({ currentProduct }) => {
         </>
     )
 }
+
+
