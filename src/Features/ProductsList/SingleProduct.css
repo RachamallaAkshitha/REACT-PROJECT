@@ -116,6 +116,7 @@ hr{
     display: flex ! important;
     flex-direction: column;
     gap: 30px;
+    padding: 15px 15px;
 }
 
 .Specifications p{
@@ -134,7 +135,7 @@ hr{
     justify-content: space-between;
     align-items: center;
     align-content: center;
-    width: 600px;
+    width: 450px;
     /* gap: 12px; */
 }
 
@@ -142,6 +143,85 @@ hr{
     margin: 0;
 }
 
+.product-name {
+  color: red;            /* red highlight */
+  font-size:20px ;
+  font-weight: bolder;
+}
+
 .specify h5{
     margin: 0;
+}
+
+
+/* overviews */
+
+.overviews{
+    padding: 15px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.overviews h5{
+    color: #DDE3F0;
+}
+
+.overviews ul {
+  margin: 0 0 18px 18px;
+  padding: 0;
+}
+
+.overviews li{
+    color: #B0B8C5; 
+}
+
+.overviews p{
+     color: #B0B8C5; 
+}
+
+/* buttons */
+.details-buttons button{
+    color: white;
+    border-radius: 5px;
+    padding: 4px 15px;
+}
+
+.details-buttons{
+    display: flex;
+    justify-content: space-around;
+    padding: 0px 200px;
+    margin-top: 90px;
+    margin-bottom: 40px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.tab {
+  background: transparent;   /* ❌ no color */
+  border: none;
+  color: #8B94A3;
+  padding: 6px 14px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.tab.active {
+  background: #FF0000;       /* ✅ active color */
+  color: #FFFFFF;
+}
+
+/* hide all tab content by default */
+.tab-content {
+  display: none;
+}
+
+/* show only active one */
+.tab-content.show {
+  display: block;
 }
