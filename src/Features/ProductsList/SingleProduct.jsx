@@ -3,6 +3,7 @@ import productsData from "../../Components/Products/productsData"
 import "./SingleProduct.css"
 import { useState } from "react";
 
+
 export const SingleProduct = () => {
 
     const { id } = useParams();
@@ -15,26 +16,26 @@ export const SingleProduct = () => {
         ((product.originalPrice - product.finalPrice) / product.originalPrice) * 100
     )
 
-    const [img,setImg] =useState(product.images[0])
+    const [img, setImg] = useState(product.images[0])
 
     return (
         <>
             <div className="product-details">
                 <div className="product-images">
 
-                    <div className="image-1" onClick={()=>setImg(product.images[0])}>
+                    <div className="image-1" onClick={() => setImg(product.images[0])}>
                         <img src={product.images[0]} alt="" />
                     </div>
 
-                    <div className="image-2" onClick={()=>setImg(product.images[1])}>
+                    <div className="image-2" onClick={() => setImg(product.images[1])}>
                         <img src={product.images[1]} alt="" />
                     </div>
 
-                    <div className="image-3" onClick={()=>setImg(product.images[2])}>
+                    <div className="image-3" onClick={() => setImg(product.images[2])}>
                         <img src={product.images[2]} alt="" />
                     </div>
 
-                    <div className="images-4" onClick={()=>setImg(product.images[3])}>
+                    <div className="images-4" onClick={() => setImg(product.images[3])}>
                         <img src={product.images[3]} alt="" />
                     </div>
 
@@ -102,13 +103,35 @@ export const SingleProduct = () => {
 
                     <hr />
 
-                    <button className="btn btn-danger" style={{padding:"5px 40px",borderRadius:"3px"}}>Add to Cart</button>
+                    <button className="btn btn-danger" style={{ padding: "5px 40px", borderRadius: "3px" }}>Add to Cart</button>
 
+                </div>
+            </div>
 
-
-
-
-
+            <div className="Specifications">
+                <div className="specify">
+                    <p>Brand</p>
+                    <h5>{product.brand}</h5>
+                </div>
+                <div className="specify">
+                    <p>Model</p>
+                    <h5>{product.title}</h5>
+                </div>
+                <div className="specify">
+                    <p>Generic Name</p>
+                    <h5>{product.category}</h5>
+                </div>
+                <div className="specify">
+                    <p>Headphone Type</p>
+                    <h5>{product.type}</h5>
+                </div>
+                <div className="specify">
+                    <p>Connectivity</p>
+                    <h5>{product.connectivity}</h5>
+                </div>
+                <div className="specify">
+                    <p>Microphone</p>
+                    <h5>Yes</h5>
                 </div>
             </div>
 

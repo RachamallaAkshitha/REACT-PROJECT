@@ -109,3 +109,39 @@ hr{
     margin-top: 30px;
     margin-bottom: 30px;
 }
+
+/* Specifications */
+
+.Specifications{
+    display: flex ! important;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.Specifications p{
+    align-items: flex-start;
+    color: #B6C0CF;
+
+}
+
+.Specifications h5{
+    align-items: flex-end;
+    color: #B9C3D2;
+}
+
+.specify{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    width: 600px;
+    /* gap: 12px; */
+}
+
+.specify p{
+    margin: 0;
+}
+
+.specify h5{
+    margin: 0;
+}
