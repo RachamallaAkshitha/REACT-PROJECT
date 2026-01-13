@@ -5,6 +5,7 @@ import Carousel from "../Components/Carousel/Carousel"
 import FeaturedProducts from "../Components/FeaturedProducts/FeaturedProducts"
 import { Advantages } from "../Components/Advantages/Advantages"
 import { Cart } from "../Components/Cart/Cart"
+import { Products } from "../Components/Products/Products"
 
 export const AppRouter = () => {
 
@@ -22,6 +23,7 @@ export const AppRouter = () => {
             }
             />
             <Route path='/Cart' element={<Cart/>} />
+            <Route path="/products" element={<Products/>} />
             
             <Route path="product-details/:id" element={<SingleProduct />} />
         </Routes>

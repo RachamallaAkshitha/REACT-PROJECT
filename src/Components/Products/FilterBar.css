@@ -1,0 +1,28 @@
+.filter-sidebar {
+  background: #0f0f0f;
+  color: white;
+  padding: 20px;
+  height: calc(100vh - 80px);
+  overflow-y: auto;
+  position: sticky;
+  top: 80px;
+}
+
+.filter-section {
+  margin-bottom: 20px;
+}
+
+.filter-section label {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.clear-btn {
+  width: 100%;
+  padding: 10px;
+  background: red;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 20px;
+}

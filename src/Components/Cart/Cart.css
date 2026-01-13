@@ -106,3 +106,31 @@
 
 
 
+
+.empty {
+  min-height: 60vh;             
+  display: flex;
+  flex-direction: column;
+  justify-content: center;       
+  align-items: center;          
+  gap: 16px;
+}
+
+.empty h4 {
+  color: white;
+  text-align: center;
+}
+
+.empty .icon {
+  font-size: 100px;
+
+}
+
+.empty button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: red;
+  color: white;
+}

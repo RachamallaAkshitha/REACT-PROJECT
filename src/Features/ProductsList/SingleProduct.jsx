@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import productsData from "../../Components/Products/productsData"
 import "./SingleProduct.css"
 import { useState } from "react";
-import { Reviews } from "../../Reviews/reviews";
+import { Reviews } from "../../Components/Reviews/Reviews";
 import { RelatedProducts } from "../../Components/RelatedProducts/RelatedProducts";
 import { Advantages } from "../../Components/Advantages/Advantages";
 import { useDispatch } from "react-redux";
@@ -184,7 +184,7 @@ export const SingleProduct = () => {
 
 
             <div className={`tab-content ${tab === "Reviews" ? "show" : ""}`}>
-                <Reviews />
+                <Reviews/>
             </div>
 
             <RelatedProducts currentProduct={product} />
