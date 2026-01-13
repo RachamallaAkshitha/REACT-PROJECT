@@ -1,16 +1,16 @@
-.heading h2{
+.heading h2 {
     color: white;
     text-align: center;
     margin-top: 10%;
 }
 
-.categories{
+.categories {
     padding: 10px;
     display: flex;
     justify-content: space-evenly;
 }
 
-.categories button{
+.categories button {
     background-color: black;
     color: white;
     border: none;
@@ -18,75 +18,88 @@
     border-radius: 3px;
 }
 
-.categories button.active{
+.categories button.active {
     background-color: red;
 }
 
-.card-image{
+.card-image {
     background-color: rgb(15, 15, 15);
     display: flex;
     justify-content: center;
     padding: 15px 0px;
 }
 
-.card-body p{
-       color:rgb(172, 178, 181);
+.card-image img {
+    transition: transform 0.3s ease;
 }
 
-img{
+.card-image img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+
+}
+
+.card-body p {
+    color: rgb(172, 178, 181);
+}
+
+img {
     height: 175px;
     width: 175px;
 }
 
-.card{
+.card {
     background-color: black;
     border: none;
-    outline : 1px solid rgb(82, 80, 80);
+    outline: 1px solid rgb(82, 80, 80);
 }
 
-.card-body h4{
+.card-body h4 {
     color: white;
 }
 
 .product-link {
-  text-decoration: none;
-  color: inherit;
-  display: block;
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
 
 
-.card-price{
+.card-price {
     display: flex;
     text-align: center;
+    align-items: center;
     gap: 20px;
 }
 
-.card-price p{
-    font-size:18px;
-    font-weight: bold;
+.card-price p {
+    font-weight: 700;
+    font-size: 24px;
     color: white;
+    margin: 0;
 }
 
-.card-price span{
-    font-weight: bold;
-    font-size: 14px;
-    color: lightslategrey;
+.card-price span {
+    color: lightslategray;
     text-decoration: line-through;
+    font-size: 16px;
+    font-weight: bold;
 }
 
-.card-body button{
+.card-body button {
     background-color: red;
     color: white;
     min-width: 120px;
     padding: 6px 90px;
 }
-.card-body hr{
-    color:#444444;
+
+.card-body hr {
+    color: #444444;
     height: 2px;
 }
 
 .rating i {
-    color: red;       
+    color: red;
     font-size: 10px;
     margin-right: 3px;
 }
@@ -94,9 +107,9 @@ img{
 .browse {
     height: 100%;
     display: flex;
-    justify-content: center; 
-    align-items: center;  
-    color: white;  
+    justify-content: center;
+    align-items: center;
+    color: white;
     text-align: center;
     border: 1px solid rgb(82, 80, 80);
 }

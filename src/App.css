@@ -1,9 +1,11 @@
-body{
-    background-color: black;
+body {
+  background-color: black;
+  font-family: 'Inter', sans-serif;
 
 }
 
 ::selection {
   background-color: red;
-  color: white;   /* text color when selected */
+  color: white;
 }
+

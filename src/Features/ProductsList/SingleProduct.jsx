@@ -3,6 +3,7 @@ import productsData from "../../Components/Products/productsData"
 import "./SingleProduct.css"
 import { useState } from "react";
 import { Reviews } from "../../Reviews/reviews";
+import { RelatedProducts } from "../../Components/RelatedProducts/RelatedProducts";
 
 
 export const SingleProduct = () => {
@@ -179,6 +180,8 @@ export const SingleProduct = () => {
             <div className={`tab-content ${tab === "Reviews" ? "show" : ""}`}>
                 <Reviews/>
             </div>
+
+            <RelatedProducts currentProduct={product}/>
 
         </>
     )
